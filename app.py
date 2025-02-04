@@ -34,8 +34,8 @@ if page == "Product Recommendation":
 #             prediction = review_model.predict([[product_encoded, 0, 0, 0, 0]])
 #             st.write(f"Predicted Review Score: {round(prediction[0], 2)}")
 
-# elif page == "Power BI Dashboard":
-#     st.title("Power BI Dashboard")
-#     st.markdown("""
-#     <iframe title="Power BI Report" width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZWIzYmJmOTMtMjg0MC00YzQ5LTlkMmYtZDBhYmEwZWI5OGIxIiwidCI6IjNjYjkxMTI3LTkyNDMtNGQ1Yy04NWJiLTM2Zjc4YTIwMDA2MiJ9" frameborder="0" allowFullScreen="true"></iframe>
-#     """, unsafe_allow_html=True)
+elif page == "Power BI Dashboard":
+    st.title("Power BI Dashboard")
+    st.markdown("""
+    <iframe title="Power BI Report" width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZWIzYmJmOTMtMjg0MC00YzQ5LTlkMmYtZDBhYmEwZWI5OGIxIiwidCI6IjNjYjkxMTI3LTkyNDMtNGQ1Yy04NWJiLTM2Zjc4YTIwMDA2MiJ9" frameborder="0" allowFullScreen="true"></iframe>
+    """, unsafe_allow_html=True)
