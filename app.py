@@ -36,6 +36,9 @@ elif page == "Review Predictor":
 
 elif page == "Power BI Dashboard":
     st.title("Power BI Dashboard")
-    st.markdown("""
-    <iframe title="Power BI Report" width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZWIzYmJmOTMtMjg0MC00YzQ5LTlkMmYtZDBhYmEwZWI5OGIxIiwidCI6IjNjYjkxMTI3LTkyNDMtNGQ1Yy04NWJiLTM2Zjc4YTIwMDA2MiJ9" frameborder="0" allowFullScreen="true"></iframe>
-    """, unsafe_allow_html=True)
+    st.components.v1.html(
+        '<iframe title="Ecommerce_dataset_dashboard_4" width="600" height="373.5" '
+        'src="https://app.powerbi.com/view?r=eyJrIjoiNzQxYTRjNzctY2Q0Yi00NzE1LWI3MjItNTA3MDljZjJhOWU2IiwidCI6IjNjYjkxMTI3LTkyNDMtNGQ1Yy04NWJiLTM2Zjc4YTIwMDA2MiJ9" '
+        'frameborder="0" allowFullScreen="true"></iframe>',
+        height=400,
+    )
