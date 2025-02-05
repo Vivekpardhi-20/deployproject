@@ -4,7 +4,7 @@ import joblib
 import pandas as pd
 
 # Load models
-#review_model = joblib.load("review_prediction.pkl")
+review_model = joblib.load("review_prediction.pkl")
 knn_model = joblib.load("product_recommendation.pkl")
 
 # Load dataset to fetch product details
@@ -25,14 +25,14 @@ if page == "Product Recommendation":
             st.write("Recommended Products:")
             st.dataframe(recommended_products)
 
-# elif page == "Review Predictor":
-#     st.title("Predict Review Score")
-#     product_id = st.text_input("Enter Product ID:")
-#     if st.button("Predict Review"):
-#         if product_id:
-#             product_encoded = int(product_id)  # Assuming encoded ID is an integer
-#             prediction = review_model.predict([[product_encoded, 0, 0, 0, 0]])
-#             st.write(f"Predicted Review Score: {round(prediction[0], 2)}")
+elif page == "Review Predictor":
+    st.title("Predict Review Score")
+    product_id = st.text_input("Enter Product ID:")
+    if st.button("Predict Review"):
+        if product_id:
+            product_encoded = int(product_id)  # Assuming encoded ID is an integer
+            prediction = review_model.predict([[product_encoded, 0, 0, 0, 0]])
+            st.write(f"Predicted Review Score: {round(prediction[0], 2)}")
 
 elif page == "Power BI Dashboard":
     st.title("Power BI Dashboard")
